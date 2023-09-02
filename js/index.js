@@ -86,7 +86,7 @@ else{
          div.innerHTML=`
        
          <div class="card w-[340px]">
-         <figure class="w-[340px] h-[200px] rounded my-2"><img class="w-full" src="${card?.thumbnail}" alt="thumbnail" />
+         <figure class="w-[340px] h-[200px] rounded-lg my-2"><img width="340px" class=" rounded-lg h-[200px]" src="${card?.thumbnail}" alt="thumbnail" />
     <p class=" z-40  bg-[#171717] text-white rounded-lg p-2 -ml-[180px] mr-2 -mb-[100px]">${convertTime(postDate)?convertTime(postDate):" "}</p></figure></figure>
          <div class="py-2">
           <div class="flex items-start ml-0">
@@ -130,7 +130,6 @@ else{
 loadcategory();
 displaycontents("1000");
     
-
 
 
 
