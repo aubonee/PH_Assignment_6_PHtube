@@ -3,37 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- cdn for daisy UI and Tailwind -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+ 
+      <!-- google fonts cdn -->
+ 
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,600;1,400;1,800&display=swap" rel="stylesheet">
+       <!-- font awsome cdn -->
+             
+      <script src="https://kit.fontawesome.com/34af142b44.js" crossorigin="anonymous"></script>
+ 
+ 
     <title>blog page</title>
 </head>
-<body>
-   <h1> Scope of var, let, and const:</h1>
+<body class="w-full">
+<div class="grid grid-cols-3 gap-5">
+    <div class="m-5 p-5 bg-slate-50 shadow-lg rounded-md">   
+         <h1 class="text-2xl font-bold text-green-700 text-center py-2"> Scope of var, let, and const:</h1>
+ 
+        <p class="text-justify"> <span class="font-bold">var:</span> Variables are declared with var have global scope, depending on where they are declared.var variables can be updated and re-declared within its scope. They are accessible throughout the entire function in which they are declared or globally if declared outside of any function. Variables declared with var are also hoisted, which means they are moved to the top of their containing function or global scope during compilation.
+          <br> <br>  <span class="font-bold">let:</span> Variables declared with let have block scope, meaning they are only accessible within the block (enclosed by curly braces) in which they are declared. let variables are not hoisted, so they are only accessible after the point in the code where they are declared. 
+          <br><br><span class="font-bold">const:</span> Variables declared with const are also block-scoped like let. However, they have an additional characteristic. They cannot be reassigned after their initial value is assigned. This makes const ideal for declaring constants or variables that should not be changed.
+           </p>
+        
+        </div>
+            <div class="m-5 p-5 bg-slate-50 shadow-lg rounded-md">
+                <h1 class="text-2xl font-bold text-green-700 text-center py-2">Use Cases of null and undefined:</h1>
+        
+            <p class="text-justify"> <span class="font-bold">Null: </span>Null in JavaScript means an empty value and is also a primitive type in JavaScript. The variable which has been assigned as null contains no value.When we assign null as a value to any variable, it means that it is empty or blank.
+            
+             <br><br>   <span class="font-bold">Undefined:</span> Undefined means the variable has been declared, but its value has not been assigned. It can also be the default return value of a function that doesn't explicitly return anything. undefined means "not defined". So we declare a variable but do not assign a value to it, the variable becomes undefined.</p>
+            </div>
 
-<p>var: Variables declared with var have function scope or global scope, depending on where they are declared. This means they are accessible throughout the entire function in which they are declared or globally if declared outside of any function. Variables declared with var are also hoisted, which means they are moved to the top of their containing function or global scope during compilation.
-
-    let: Variables declared with let have block scope, meaning they are only accessible within the block (enclosed by curly braces) in which they are declared. let variables are not hoisted, so they are only accessible after the point in the code where they are declared.
-    
-    const: Variables declared with const are also block-scoped like let. However, they have an additional characteristic: they cannot be reassigned after their initial value is assigned. This makes const ideal for declaring constants or variables that should not be changed.</p>
-
-<h1>Use Cases of null and undefined:</h1>
-
-<p>null: null is a value that represents the intentional absence of any object value. It is often used to indicate that a variable should have no value or that an object property does not currently reference any object. For example, if a variable user is set to null, it can signify that there is no currently logged-in user.
-
-    undefined: undefined represents a variable or object property that has been declared but has not been assigned any value. It can also be the default return value of a function that doesn't explicitly return anything. It indicates that a value is missing or has not been initialized. It's often better to explicitly set a variable to null when you want to indicate the absence of a value, while undefined typically arises when you forget to assign a value or when accessing properties that don't exist.</p>
-
-    <h1>REST API (Representational State Transfer API):</h1>
-<p>
-
-    REST API stands for Representational State Transfer Application Programming Interface. It is an architectural style for designing networked applications. REST is not a protocol but a set of principles and constraints used for creating web services that are scalable, stateless, and easy to maintain. Here are some key aspects of REST APIs:
-    
-    Stateless: Each request from a client to a server must contain all the information needed to understand and process the request. The server does not store any client state between requests.
-    
-    Resources: Resources are identified by URIs (Uniform Resource Identifiers) and can represent any entity, such as data objects, services, or even real-world objects.
-    
-    HTTP Methods: REST APIs typically use standard HTTP methods like GET (retrieve data), POST (create data), PUT (update data), DELETE (remove data), etc., to perform actions on resources.
-    
-    Representation: Resources can have multiple representations, such as JSON, XML, HTML, etc., and clients can request a specific representation using content negotiation.
-    
-    Stateless Communication: Each request/response between client and server should be self-contained, with no dependency on previous requests. This allows for scalability and fault tolerance.</p>
-    <a href="index.html"> go back</a>
-</body>
+           <div class="m-5 p-5 bg-slate-50 shadow-lg rounded-md"> 
+            <h1 class="text-2xl font-bold text-green-700 text-center py-2">REST API (Representational State Transfer API):</h1>
+            <p class="text-justify">
+            
+                REST stands for Representational State Transfer and API stands for  Application Programming Interface. RESTful APIs use HTTP requests to interact with data, while traditional APIs can use a variety of protocols. REST API is an architectural style for designing networked applications.  Here are some key aspects of REST APIs:
+                
+               <br><span class="font-bold"> Stateless:</span> Each request from a client to a server must contain all the information needed to understand and process the request. The server does not store any client state between requests.
+                
+               <br><span class="font-bold"> Resources:</span> Resources are identified by URIs (Uniform Resource Identifiers) and can represent any entity, such as data objects, services, or even real-world objects.
+                
+               <br><span class="font-bold"> HTTP Methods:</span> REST APIs typically use standard HTTP methods like GET (retrieve data), POST (create data), PUT (update data), DELETE (remove data), etc., to perform actions on resources.
+                
+               </p>
+               </div>
+           
+</div>
+<div class="w-full flex justify-center"><a class="btn mb-7 bg-green-700 p-5 text-white" href="index.html"> go back</a></div>
+ </body>
 </html>
